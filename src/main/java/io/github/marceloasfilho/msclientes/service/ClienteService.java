@@ -6,7 +6,7 @@ import java.util.Optional;
 
 public interface ClienteService {
 
-    void salvarAluno(Cliente cliente);
+    void salvarCliente(Cliente cliente);
 
     Optional<Cliente> obterClientePorCPF(String CPF);
 }
