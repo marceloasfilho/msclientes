@@ -10,6 +10,11 @@ public class ClienteDTO {
     private Integer idade;
 
     public Cliente toModel() {
-        return new Cliente(this.nome, this.cpf, this.idade);
+        Cliente cliente = new Cliente();
+        cliente.setCpf(this.cpf);
+        cliente.setNome(this.nome);
+        cliente.setIdade(this.idade);
+
+        return cliente;
     }
 }
