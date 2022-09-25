@@ -1,7 +1,8 @@
 package io.github.marceloasfilho.msclientes.entity;
 
-import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,8 +10,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-@Data
 @NoArgsConstructor
+@Getter
+@Setter
 public class Cliente {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,10 +20,4 @@ public class Cliente {
     private String nome;
     private String cpf;
     private Integer idade;
-
-    public Cliente(String nome, String cpf, Integer idade) {
-        this.nome = nome;
-        this.cpf = cpf;
-        this.idade = idade;
-    }
 }

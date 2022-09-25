@@ -25,9 +25,8 @@ public class ClienteController {
     }
 
     @GetMapping(path = "/status")
-    public String status() {
+    public void status() {
         log.info("Status MSCLIENTES");
-        return "Status MSCLIENTES";
     }
 
     @Transactional
